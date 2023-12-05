@@ -5,7 +5,7 @@ This repository combines data from a variety of data sources to ingest prospecti
 ## Notes before we begin
 
 * For this exercise, I initially attempted to connect to an S3 bucket to download the CSVs via the Python library boto3. The AWS Access Key Id I was given does not exist, so I had to use the CSVs included with the exercise instead.
-* I performed some initial data exploration and observed that there were no duplicate records across the CSVs -- all records had a unique combination of phone number and address.
+* I performed some initial data exploration and observed that there were no duplicate records across the CSVs; all records had a unique combination of phone number and address.
 * Line 12 of the Nevada CSV begins with "MY LITTLE ANGEL�S". This � character does not play well with UTF-8 encoding, so I changed it manually to an apostrophe.
 * The last record of the Oklahoma CSV is incomplete; it cuts off a string value before a second quotation mark denotes the end of the string, which causes an EOF error when the CSV is read. I went ahead and added a quotation mark at the end of the file, even though that last record is incomplete with no phone number or address.
 
